@@ -13,6 +13,10 @@ public class BranchTest1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FuncMove();
+    }
+    void FuncMove() 
+    {
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(speed * transform.forward, Space.World);
@@ -20,6 +24,14 @@ public class BranchTest1 : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(-speed * transform.forward, Space.World);
+        }
+        if (Input.GetKey(KeyCode.A)) 
+        {
+            transform.Translate(-speed * transform.right, Space.World);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(speed * transform.right, Space.World);
         }
     }
 }
